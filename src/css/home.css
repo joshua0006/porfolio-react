@@ -50,13 +50,13 @@
   position: absolute;
   bottom: 0;
 }
-.product .bg1{
-  background: url(../img/home/hinata-before.webp) var(--left),
-              url(../img/home/mockup.png) 0 0;
-  background-size: auto 100%;
+.product .bg1 {
+  background-image: url(../img/home/hinata-before.jpg), url(../img/home/mockup.png);
+  background-position: var(--left), 0 0;
 }
+
 .product .bg2{
-  background: url(../img/home/hinata-after.png) var(--left),
+  background: url(../img/home/hinata-after.jpg) var(--left),
               url(../img/home/mockup.png) 0 0;
   background-size: auto 100%;
   opacity: 0;
@@ -70,6 +70,7 @@
   transition: 2s;
   mask-image: url(../img/home/mockup.png);
   mask-size: auto 100%;
+
 }
 
 .product:hover {
