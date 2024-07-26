@@ -1,0 +1,105 @@
+.skills{
+  grid-row: 2/7;
+  grid-column: 1/5;
+  width: 100%;
+  max-width: 600px;
+  margin-left: 15%;
+
+}
+.skill-name{
+  font-size: 18px;
+  font-weight: 700;
+  color: white;
+  margin: 20px 0;
+}
+.skill-bar{
+  width: 100%;
+  height: 14px;
+  background-color: black;
+  border-radius: 3px;
+}
+.skill-per{
+  width: attr(per);
+  height: 14px;
+  background-color: var(--bg-color);
+  border-radius: 3px;
+  position: relative;
+  animation: fillBars 2.5s 1;
+}
+.skill-per::before{
+  content: attr(per);
+  position: absolute;
+  padding: 4px 6px;
+  background-color: white;
+  border-radius: 4px;
+  font-size: 12px;
+  top: -40px;
+  right: 0;
+  transform: translateX(50%);
+  color: black;
+}
+.skill-per::after{
+  content: "";
+  position: absolute;
+  width: 10px;
+  height: 10px;
+  background: white;
+  top: -20px;
+  right: 0;
+  transform: translateX(50%) rotate(45deg);
+  border-radius: 2px;
+}
+
+@keyframes fillBars {
+  from{
+    width: 0;
+  }
+  to{
+    width: 100%;
+  }
+}
+.skills-slides{
+  grid-row: 3/7;
+  grid-column: 6/10;
+  width: 100%;
+  text-align: center;
+  overflow: hidden;
+  position: relative;
+}
+.skills-slides .slider{
+  position: absolute;
+  width: 100px;
+  height: 150px;
+  top: 10%;
+  left: calc(50% - 20px);
+  transform-style: preserve-3d;
+  transform: perspective(1000px);
+  animation: autoRun 20s linear infinite;
+  z-index: 2;
+}
+@keyframes autoRun{
+  from{
+      transform: perspective(1000px) rotateX(-16deg) rotateY(360deg);
+  }to{
+      transform: perspective(1000px) rotateX(-16deg) rotateY(0deg);
+  }
+}
+
+.skills-slides .slider .item{
+  position: absolute;
+  inset: 0 0 0 0;
+  transform: 
+      rotateY(calc( (var(--position) - 1) * (720 / var(--quantity)) * 1deg))
+      translateZ(250px);
+}
+.skills-slides .slider .item img{
+  width: 100%;
+  height: 100%;
+  object-fit: cover;
+}
+.home-rotating {
+  grid-row: 1/7;
+  grid-column: 7/9;
+  overflow: hidden;
+  position: relative;
+}

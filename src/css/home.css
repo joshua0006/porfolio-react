@@ -1,0 +1,87 @@
+.home-description{
+  grid-row: 3/5;
+  grid-column: 2/6;
+}
+.home-description h2 span{
+  font-family: "Playwrite CU", Arial, Helvetica, sans-serif;
+  letter-spacing: 2px;
+  
+}
+.home-description span{
+  color: var(--bg-color);
+}
+.home-description button{
+  background-color: var(--bg-color);
+  border: none;
+  outline: none;
+  height: 40px;
+  width: 150px;
+  margin-top: 20px;
+  border-radius: 5px;
+  color: white;
+  font-size: 1rem;
+  position: absolute;
+  cursor: pointer;
+}
+
+.home-description button:hover{
+  background-color: rgb(255, 255, 255);
+  color: var(--bg-color);
+  transition: all 0.2s ease-in-out;
+}
+.product{
+  position: absolute;
+  left: 35px;
+  bottom: 0px;
+  z-index: 2;
+  transition: 1.5s;
+}
+.product p{
+  position: absolute;
+  top: -500px;
+  transform: translateX(50%);
+  white-space: nowrap;
+  transition: opacity 1.5s;
+}
+.product:hover p {
+  opacity: 0;
+}
+.product .soda{
+  position: absolute;
+  bottom: 0;
+}
+.product .bg1{
+  background: url(../img/home/hinata-before.webp) var(--left),
+              url(../img/home/mockup.png) 0 0;
+  background-size: auto 100%;
+}
+.product .bg2{
+  background: url(../img/home/hinata-after.png) var(--left),
+              url(../img/home/mockup.png) 0 0;
+  background-size: auto 100%;
+  opacity: 0;
+}
+.soda{
+  --left: 0px;
+  background-size: auto 100%;
+  width: 220px;
+  aspect-ratio: 2 / 4;
+  background-blend-mode: multiply;
+  transition: 2s;
+  mask-image: url(../img/home/mockup.png);
+  mask-size: auto 100%;
+}
+
+.product:hover {
+  bottom: 100px;
+}
+
+.product:hover .soda:nth-child(2) {
+  opacity: 1;
+  --left: -350px;
+}
+
+.product:hover .soda:nth-child(1) {
+  opacity: 0;
+  --left: -300px;
+}

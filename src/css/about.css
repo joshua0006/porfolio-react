@@ -1,0 +1,57 @@
+.my-picture{
+  background-color: beige;
+  grid-row: 3/6;
+  grid-column: 7/9;
+  border-radius: 200px;
+  position: relative;
+}
+.vertical1 {
+  width: 5%;
+  height: 40%;
+  background: linear-gradient(to bottom, white, var(--bg-color));
+  position: absolute;
+  top: -15%;
+  left: -10%;
+}
+
+.horizontal1 {
+  width: 40%;
+  height: 5%;
+  background: linear-gradient(to right, white, var(--bg-color));
+  position: absolute;
+  top: -10%;
+  left: -15%;
+}
+.vertical2 {
+  width: 5%;
+  height: 40%;
+  background: linear-gradient(to top, white, var(--bg-color));
+  position: absolute;
+  top: 70%;
+  left: 110%;
+}
+.horizontal2 {
+  width: 40%;
+  height: 5%;
+  background: linear-gradient(to left, white, var(--bg-color));
+  position: absolute;
+  top: 100%;
+  left: 80%;
+}
+.about-container{
+  display: flex;
+  flex-direction: column;
+}
+.about .description{
+  grid-row: 3/5;
+  grid-column: 2/5;
+
+}
+.about .description h2{
+  font-size: 5rem;  
+  text-align: center;
+}
+.about .description p{
+  font-weight: 200;
+  font-size: 1.5rem;
+}

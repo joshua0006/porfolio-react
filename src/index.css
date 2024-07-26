@@ -1,0 +1,110 @@
+@import url('https://fonts.googleapis.com/css2?family=Kanit:ital,wght@0,100;0,200;0,300;0,400;0,500;0,600;0,700;0,800;0,900;1,100;1,200;1,300;1,400;1,500;1,600;1,700;1,800;1,900&display=swap');
+@import url('https://fonts.googleapis.com/css2?family=Playwrite+AT:ital,wght@0,100..400;1,100..400&family=Playwrite+CU:wght@100..400&display=swap');
+:root {
+  text-rendering: optimizeLegibility;
+  -webkit-font-smoothing: antialiased;
+  -moz-osx-font-smoothing: grayscale;
+  --bg-color: tomato;
+}
+*{
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+  font-family: Kanit, Arial, Helvetica, sans-serif;
+}
+body{
+  overflow: hidden;
+}
+[data-theme="tomato"]{
+  --bg-color: tomato;
+  transition: all 1s;
+}
+[data-theme="orange"]{
+  --bg-color: orange;
+}
+[data-theme="green"]{
+  --bg-color: rgb(0, 175, 0);
+}
+[data-theme="teal"]{
+  --bg-color: teal;
+}
+.App{
+  background-color: #555;
+  background-image:
+  repeating-linear-gradient(
+      to right, transparent 0 150px, #0001 150px 151px
+  ),
+  repeating-linear-gradient(
+      to bottom, transparent 0 150px, #0001 150px 151px
+  ),
+  linear-gradient(to bottom right, 
+                      rgba(27, 27, 27, 0.9)60%, 
+                      rgba(82, 82, 82, 0.9), var(--bg-color)),
+                  url(img/bg.jpg);
+  background-size: cover;
+}
+#home{
+  animation: toRight 0.5s linear;
+}
+#about{
+  animation: toRight 0.7s linear;
+}
+#skills{
+  animation: toRight 0.9s linear;
+}
+#projects{
+  animation: toRight 1.15s linear;
+}
+@keyframes toRight{
+  0%{margin-right: 500px;}
+  100%{margin-right: 0;}
+}
+.Home, .projects, .about, .skills-container {
+  width: 85%;
+  position: relative;
+  right: 0;
+  top: 0;
+  display: grid;
+  margin-left: 15%;
+  grid-template-rows: repeat(10, 100px); 
+  grid-template-columns: repeat(10, 150px); 
+  padding: 10px;
+  color: rgb(241, 241, 241);
+  font-size: 1.5rem;
+}
+.change-theme {
+  background-color: #333;
+  grid-row: 8 / 9; 
+  grid-column: 7 / 9; 
+  border-radius: 5px;
+  padding: 10px;
+}
+.change-theme div{
+  display: flex;
+  justify-content: center;
+  margin-top: 5px;
+}
+.change-theme button{
+  border-radius: 40px;
+  width: 40px;
+  height: 40px;
+  border: none;
+  outline: none;
+  margin: 0 5px;
+  cursor: pointer;
+}
+.change-theme button:hover{
+  box-shadow: 0 0 3px white;
+}
+.tomato{
+  background-color: tomato;
+}
+.orange{
+  background-color: orange;
+}
+.green{
+  background-color: green;
+}
+.teal-blue{
+  background-color: teal;
+}
