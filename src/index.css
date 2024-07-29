@@ -4,7 +4,6 @@
   text-rendering: optimizeLegibility;
   -webkit-font-smoothing: antialiased;
   -moz-osx-font-smoothing: grayscale;
-  --bg-color: tomato;
 }
 *{
   margin: 0;
@@ -12,10 +11,6 @@
   box-sizing: border-box;
   font-family: var(--font-style);
 }
-body{
-  overflow: hidden;
-}
-
 [data-theme="tomato"]{
   --bg-color: rgb(255, 99, 71);
   --bg-rgb: 255, 99, 71;
@@ -33,8 +28,8 @@ body{
   --bg-rgb: 0, 128, 128;
 }
 
-[data-font="Arial"]{
-  --font-style: "Arial";
+[data-font="Kanit"]{
+  --font-style: "Kanit";
 }
 [data-font="Serif"]{
   --font-style: monospace;
@@ -44,6 +39,10 @@ body{
 }
 [data-font="Cursive"]{
   --font-style: Cursive;
+}
+body{
+  overflow: hidden;
+  
 }
 
 .App{
@@ -60,6 +59,7 @@ body{
                       rgba(82, 82, 82, 0.9), var(--bg-color)),
                   url(img/bg.jpg);
   background-size: cover;
+  
 }
 #home{
   animation: toRight 0.7s linear;
@@ -117,6 +117,10 @@ body{
   margin: 0 5px;
   cursor: pointer;
 }
+.highlight {
+  box-shadow: 0 0 10px rgb(238, 238, 238);
+}
+
 .change-theme button:hover{
   box-shadow: 0 0 3px white;
 }
