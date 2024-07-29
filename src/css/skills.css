@@ -11,6 +11,7 @@
   font-weight: 700;
   color: white;
   margin: 20px 0;
+  font-size: 2rem;
 }
 .skill-bar{
   width: 100%;
@@ -59,8 +60,8 @@
   }
 }
 .skills-slides{
-  grid-row: 3/7;
-  grid-column: 6/10;
+  grid-row: 2/7;
+  grid-column: 5/12;
   width: 100%;
   text-align: center;
   overflow: hidden;
@@ -68,8 +69,8 @@
 }
 .skills-slides .slider{
   position: absolute;
-  width: 100px;
-  height: 150px;
+  width: 150px;
+  height: 220px;
   top: 10%;
   left: calc(50% - 20px);
   transform-style: preserve-3d;
@@ -90,7 +91,7 @@
   inset: 0 0 0 0;
   transform: 
       rotateY(calc( (var(--position) - 1) * (720 / var(--quantity)) * 1deg))
-      translateZ(250px);
+      translateZ(350px);
 }
 .skills-slides .slider .item img{
   width: 100%;

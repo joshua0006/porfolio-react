@@ -1,0 +1,75 @@
+.contact p:not(:first-child){
+  display: inline;
+  margin-left: 20px;
+}
+.contact a{
+  color: var(--bg-color);
+  text-decoration: none;
+  margin-right: 50px;
+  font-size: 2rem;
+}
+.contact a:hover{
+  -webkit-animation: glow 1s ease-in-out infinite alternate;
+  -moz-animation: glow 1s ease-in-out infinite alternate;
+  animation: glow 1s ease-in-out infinite alternate;
+  transition: animation 0.3s;
+}
+@keyframes glow {
+  from {
+    text-shadow: 0 0 5px #777171, 0 0 10px #6d6868, 0 0 20px #796767, 0 0 30px #4d4d4d, 0 0 40px #974b4b, 0 0 50px #926e6e, 0 0 60px #8b5050;
+  }
+  to {
+    text-shadow: 0 0 20px #361919, 0 0 30px #582f2f, 0 0 40px #747474, 0 0 50px #616161, 0 0 60px #424141, 0 0 70px #313131, 0 0 80px #161616;
+  }
+}
+.header{
+  grid-column: 5/8;
+  grid-row: 2/4;
+  white-space: nowrap;
+  font-weight: 200;
+}
+.social-media{
+  grid-column: 5/9;
+  grid-row: 3/5;
+}
+.icon{
+  scale: 4;
+  margin-right: 10px;
+}
+.contact-form{
+  grid-row: 4/7;
+  grid-column: 4/6;
+  display: flex;
+}
+.contact-form div:first-child{
+  display: flex;
+  flex-direction: column;
+  margin-top: 50px;
+  margin-right: 50px;
+}
+input, textarea{
+  outline: none;
+  border: none;
+  display: block;
+  padding: 5px;
+  border-radius: 5px;
+}
+input:not(:last-child){
+  height: 30px;
+  width: 250px;
+}
+textarea{
+  margin-bottom: 10px;
+}
+.submit-button{
+  color: white;
+  background-color: var(--bg-color);
+  height: 50px;
+  width: 150px;
+  font-size: 1.5rem;
+  cursor: pointer;
+  margin-left: 40%;
+}
+input:last-child:active{
+  scale: 0.95;
+}

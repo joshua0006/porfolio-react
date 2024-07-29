@@ -7,6 +7,12 @@ import { ArrowDown } from 'lucide-react';
 import "./css/home.css"
 
 const Home = ({ setTheme }) => {
+
+    const paragraphStyle = {
+        whiteSpace: 'nowrap',
+        marginBottom: '20px',
+      };
+
     
     return (
         <AnimatedPage>
@@ -29,7 +35,8 @@ const Home = ({ setTheme }) => {
                         cursorStyle='_'
          
                     /></span></p>
-                    <p>Lorem ipsum dolor sit amet consectetur adipisicing elit. At eveniet libero veritatis corrupti esse voluptate! Facere, ipsam, dolor temporibus consequatur distinctio fugiat porro architecto minima dolorem quae natus laborum quaerat.</p>
+                    <p style={paragraphStyle}>I am a Front-end Developer based in Philippines.</p>
+                    <p>I have enjoyed turning challenges to elegant and user-friendly designs.</p>
                     <Link to="/about"><button >Learn About me</button></Link>
                 </div>
                 <ChangeTheme setTheme={setTheme}/>

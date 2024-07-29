@@ -3,18 +3,13 @@ import ChangeTheme from "./ChangeTheme";
 import "./css/about.css"
 
 const About = ({setTheme}) => {
-    const paragraphStyle = {
-        whiteSpace: 'nowrap',
-        marginBottom: '20px',
-      };
-
+    
     return ( 
         <AnimatedPage className="about-container">
             <div className="about">
                 <div className="description">
                     <h2>about.</h2>
-                    <p style={paragraphStyle}>I am a Front-end Developer based in Philippines.</p>
-                    <p>I have enjoyed turning challenges to elegant and user-friendly designs.</p>
+                    <p>Born in 2000 in the Philippines, I am passionate about making web design more diverse and inspiring. With a mission is to explore and showcase the endless possibilities within the field, driven by continuous experimentation and thoughtful innovation.</p>
                 </div>
                 <div className="my-picture">
                     <div className="vertical1"></div>

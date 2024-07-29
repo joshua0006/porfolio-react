@@ -15,6 +15,7 @@
 body{
   overflow: hidden;
 }
+
 [data-theme="tomato"]{
   --bg-color: rgb(255, 99, 71);
   --bg-rgb: 255, 99, 71;
@@ -31,6 +32,7 @@ body{
   --bg-color: rgb(0, 128, 128);
   --bg-rgb: 0, 128, 128;
 }
+
 .App{
   background-color: #555;
   background-image:
@@ -47,10 +49,10 @@ body{
   background-size: cover;
 }
 #home{
-  animation: toRight 0.5s linear;
+  animation: toRight 0.7s linear;
 }
 #about{
-  animation: toRight 0.7s linear;
+  animation: toRight 0.8s linear;
 }
 #skills{
   animation: toRight 0.9s linear;
@@ -58,11 +60,14 @@ body{
 #projects{
   animation: toRight 1.15s linear;
 }
+#contact{
+  animation: toRight 1.5s linear;
+}
 @keyframes toRight{
   0%{margin-right: 500px;}
   100%{margin-right: 0;}
 }
-.Home, .projects, .about, .skills-container {
+.Home, .projects, .about, .skills-container, .contact {
   width: 85%;
   position: relative;
   right: 0;

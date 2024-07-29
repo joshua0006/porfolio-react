@@ -8,6 +8,7 @@
   top: 0;
   bottom: 0;
   width: 15%;
+
 }
 .nav a{
   font-size: 1.8rem;
@@ -19,8 +20,9 @@
 .nav h1{
   cursor: pointer;
   width: 100%;
-  font-size: 4rem;
+  font-size: 3rem;
   text-align: center;
+  font-family: "Playwrite CU", Arial, Helvetica, sans-serif;
 }
 .links{
   display: flex;
@@ -30,13 +32,31 @@
   align-items: center;
 }
 .links a{
-  margin: 10px 0;
-  width: 50%;
+  margin: 20px 0;
+  width: 80%;
   cursor: pointer;
   animation: toRight 0.5s linear;
   margin-right: 0px;
+  font-size: 2.5rem;
+  
+}
+.links a:focus{
+  color: var(--bg-color);
 }
 .nav a:hover{
   scale: 1.05;
   color: var(--bg-color);
+  transition: all 0.3s;
 }
+.contact-me{
+  display: flex;
+  width: 100%;
+}
+.contact-me a{
+ scale: 3;
+ margin: 40% auto;
+}
+.contact-me a:hover{
+  scale: 2.8;
+  transition: all 0.3s;
+ }
