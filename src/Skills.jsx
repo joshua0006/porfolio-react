@@ -7,7 +7,7 @@ import reactImg from './img/skills/react.png';
 import viteImg from './img/skills/vite.png';
 import "./css/skills.css"
 
-const Skills = ({setTheme}) => {
+const Skills = ({setTheme , setFont}) => {
 
     return ( 
         <AnimatedPage>
@@ -58,7 +58,7 @@ const Skills = ({setTheme}) => {
                 </div>
             </div>
         </div>
-        <ChangeTheme setTheme={setTheme}/>
+        <ChangeTheme setTheme={setTheme} setFont={setFont}/>
             </div> 
             
         </AnimatedPage>

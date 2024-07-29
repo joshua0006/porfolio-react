@@ -10,7 +10,7 @@
   margin: 0;
   padding: 0;
   box-sizing: border-box;
-  font-family: Kanit, Arial, Helvetica, sans-serif;
+  font-family: var(--font-style);
 }
 body{
   overflow: hidden;
@@ -31,6 +31,19 @@ body{
 [data-theme="teal"]{
   --bg-color: rgb(0, 128, 128);
   --bg-rgb: 0, 128, 128;
+}
+
+[data-font="Arial"]{
+  --font-style: "Arial";
+}
+[data-font="Serif"]{
+  --font-style: monospace;
+}
+[data-font="Times"]{
+  --font-style: "Times New Roman";
+}
+[data-font="Cursive"]{
+  --font-style: Cursive;
 }
 
 .App{
@@ -81,16 +94,19 @@ body{
   font-size: 1.5rem;
 }
 .change-theme {
-  background-color: #333;
   grid-row: 8 / 9; 
-  grid-column: 7 / 9; 
+  grid-column: 6 / 10; 
+  display: flex;
+  align-items: baseline;
+
+}
+.change-theme div{
+  background-color: #555;
   border-radius: 5px;
   padding: 10px;
 }
-.change-theme div{
-  display: flex;
-  justify-content: center;
-  margin-top: 5px;
+.change-theme .color{
+  margin-right: auto;
 }
 .change-theme button{
   border-radius: 40px;

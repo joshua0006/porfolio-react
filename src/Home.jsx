@@ -6,7 +6,7 @@ import { Link } from 'react-router-dom';
 import { ArrowDown } from 'lucide-react';
 import "./css/home.css"
 
-const Home = ({ setTheme }) => {
+const Home = ({ setTheme , setFont }) => {
 
     const paragraphStyle = {
         whiteSpace: 'nowrap',
@@ -39,7 +39,7 @@ const Home = ({ setTheme }) => {
                     <p>I have enjoyed turning challenges to elegant and user-friendly designs.</p>
                     <Link to="/about"><button >Learn About me</button></Link>
                 </div>
-                <ChangeTheme setTheme={setTheme}/>
+                <ChangeTheme setTheme={setTheme} setFont={setFont}/>
             </div>
         </AnimatedPage>
     );

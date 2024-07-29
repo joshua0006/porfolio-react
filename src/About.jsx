@@ -2,7 +2,7 @@ import AnimatedPage from "./AnimatedPage";
 import ChangeTheme from "./ChangeTheme";
 import "./css/about.css"
 
-const About = ({setTheme}) => {
+const About = ({setTheme , setFont}) => {
     
     return ( 
         <AnimatedPage className="about-container">
@@ -17,7 +17,7 @@ const About = ({setTheme}) => {
                     <div className="vertical2"></div>
                     <div className="horizontal2"></div>
                 </div>
-                <ChangeTheme setTheme={setTheme}/>   
+                <ChangeTheme setTheme={setTheme} setFont={setFont}/>   
             </div>
              
         </AnimatedPage>

@@ -8,7 +8,7 @@ import weatherApp from  "./img/projects/Weather-App.png";
 import ChangeTheme from "./ChangeTheme";
 import { Link } from "react-router-dom";
 
-const Projects = ({setTheme}) => {
+const Projects = ({setTheme , setFont}) => {
     return ( 
         <div className="projects">
             <div    className="projects-list" 
@@ -56,7 +56,7 @@ const Projects = ({setTheme}) => {
                     </Link>
                 </div>
             </div>
-            <ChangeTheme setTheme={setTheme}/>
+            <ChangeTheme setTheme={setTheme} setFont={setFont}/>
         </div>
      );
 }

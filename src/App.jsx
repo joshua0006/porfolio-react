@@ -10,17 +10,23 @@ import Contact from "./Contact";
 
 function App() {
   const [theme, setTheme] = useState("tomato");
+  const [font, setFont] = useState("Kanit");
 
   return (
-    <div className="App" data-theme={theme}>
+    <div className="App" data-theme={theme} data-font={font}>
       <Router>
       <NavBar />
       <Routes>
-      <Route path="/" element={<Home setTheme={setTheme} />} />
-      <Route path="/about" element={<About setTheme={setTheme}/>} />
-      <Route path="/projects" element={<Projects setTheme={setTheme}/>} />
-      <Route path="/skills" element={<Skills setTheme={setTheme}/>} />
-      <Route path="/contact" element={<Contact setTheme={setTheme}/>} />
+      <Route path="/" element={<Home  setTheme={setTheme} 
+                                      setFont={setFont} />} />
+      <Route path="/about" element={<About  setTheme={setTheme} 
+                                            setFont={setFont}/>} />
+      <Route path="/projects" element={<Projects  setTheme={setTheme} 
+                                                  setFont={setFont}/>} />
+      <Route path="/skills" element={<Skills  setTheme={setTheme} 
+                                              setFont={setFont}/>} />
+      <Route path="/contact" element={<Contact  setTheme={setTheme} 
+                                                setFont={setFont}/>} />
       </Routes>
       </Router>
     </div>

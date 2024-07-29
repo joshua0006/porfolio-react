@@ -6,7 +6,7 @@ import LinkedInIcon from '@mui/icons-material/LinkedIn';
 import { Link } from 'react-router-dom';
 import emailjs from 'emailjs-com';
 
-const Contact = ({setTheme}) => {
+const Contact = ({setTheme , setFont}) => {
 
   function sendEmail(e) {
     e.preventDefault();   
@@ -28,7 +28,7 @@ const Contact = ({setTheme}) => {
           <LinkedInIcon className="icon"/> <p>Linked-in</p>
           </Link>
         </div>
-        <ChangeTheme setTheme={setTheme}/>
+        <ChangeTheme setTheme={setTheme} setFont={setFont}/>
         <form className="contact-form" onSubmit={sendEmail}>
           <div>
             <input type="hidden" name="contact_number" />
