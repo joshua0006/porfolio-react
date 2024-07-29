@@ -5,6 +5,10 @@
   border-radius: 400px;
   aspect-ratio: 1/1;
   position: relative;
+  transition: all 0.5s;
+}
+.my-picture:hover{
+  background: url("../img/about/rick-roll.gif")  no-repeat center center / cover;
 }
 .vertical1 {
   width: 5%;
